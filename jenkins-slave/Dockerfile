@@ -30,5 +30,4 @@ EXPOSE 22
 
 # make sure host keys are regenerated before sshd starts
 COPY entrypoint.sh /entrypoint.sh
-USER jenkins
 ENTRYPOINT ["/entrypoint.sh"]
