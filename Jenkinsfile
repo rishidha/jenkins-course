@@ -1,8 +1,18 @@
-node {
-    stage('build') {
-      println('so far so good...')
-    }
-    stage('test') {
-      println('A test has failed!')
+pipeline {
+    agent none 
+    stages {
+        stage('Build') { 
+            steps {
+                echo 'Hello, Maven'
+     
+            }
+        }
+        stage('Test') {
+           
+            steps {
+                echo 'Hello, JDK'
+                
+            }
+        }
     }
 }
