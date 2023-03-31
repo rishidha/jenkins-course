@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    parameters {
+        string name: 'BRANCH_NAME', description: 'Name of the branch to build'
+    }
+    stages {
+        stage('Print Message') {
+            when {
+                expression {
+                    params.BRANCH_NAME == 'master'
+                }
+            }
+            steps {
+                echo 'hiii'
+            }
+        }
+    }
+}
